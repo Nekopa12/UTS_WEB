@@ -1,0 +1,266 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "arial", sans-serif;
+  background-color: #2331a2e6;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  background-color: #2331a2e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgb(255, 255, 255);
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #09135ee6;
+}
+/* Hero Section */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("Foto_Gedung_Primakara_University.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #000000;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7); /* Dark overlay */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-title {
+  font-size: 4rem;
+  color: #2331a2e6;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  animation: slideIn 2s ease forwards;
+}
+
+.hero-title span {
+  color: #2331a2e6;
+  display: block;
+  font-size: 1.2em;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+.primary-btn {
+  background-color: #2331a2e6;
+  color: #ffffff;
+  padding: 15px 30px;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.primary-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px #09135ee6;
+}
+/* About Section */
+.tentang-title {
+  font-size: 3rem;
+  color: #ffffffe6;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  animation: slideIn 2s ease forwards;
+}
+.tentang {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0;
+  flex-wrap: wrap;
+  color: #ffffff;
+}
+
+.tentang img {
+  max-width: 300px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.tentang-text {
+  max-width: 600px;
+  text-align: justify;
+}
+/* Contact Section */
+.hubungi {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.hubungi h2 {
+  margin-bottom: 20px;
+}
+
+.hubungi-info {
+  margin-bottom: 20px;
+}
+
+.hubungi-info p {
+  font-size: 1.1em;
+  margin: 5px 0;
+}
+
+.hubungi-info i {
+  color: #4a90e2;
+  margin-right: 10px;
+}
+
+.hubungi-form {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+.hubungi-form input,
+.hubungi-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.hubungi-form button {
+  background: linear-gradient(90deg, #4a90e2, #357ab7);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.hubungi-form button:hover {
+  background: linear-gradient(90deg, #357ab7, #4a90e2);
+}
+/* Footer */
+footer {
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.9em;
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Hero Section */
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .glow-text {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .primary-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  .tentang {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tentang img {
+    margin: 0 0 20px;
+  }
+
+  .tentang-text {
+    text-align: center;
+  }
+}
